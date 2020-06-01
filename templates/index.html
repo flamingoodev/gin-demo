@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<h1>index</h1>
+<h1>name: {{.name}}</h1>
+<h1>name: {{.age}}</h1>
+{{range .names}}
+    <p>{{.}}</p>
+{{end}}
+<img src="/static/images/avatar.jpeg">
+</body>
+</html>
