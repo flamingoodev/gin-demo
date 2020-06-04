@@ -10,6 +10,11 @@ func main() {
 	engine := gin.Default()
 	engine.LoadHTMLGlob("templates/*")
 	engine.Static("/static", "./static")
+	engine.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
 	engine.GET("/hello-world", func(context *gin.Context) {
 		context.String(http.StatusOK, "Hello World!")
 	})
